@@ -13,17 +13,17 @@ WHERE A.temperature > B.temperature;
 -- =========================================================================
 -- APPROACH 2: THE MODERN ANALYTICAL OPTION (Window Functions with Subquery)
 -- =========================================================================
-SELECT id
+SELECT id 
 FROM (
-    SELECT id,
+    SELECT id, 
+           recordDate, 
            temperature,
-           recordDate,
-           LAG(temperature) OVER (ORDER BY recordDate) AS prev_temp,
-           LAG(recordDate) OVER (ORDER BY recordDate) AS prev_date
-    FROM Weather
-) temp_comparison
-WHERE temperature > prev_temp 
-  AND DATEDIFF(recordDate, prev_date) = 1;
+           LAG(recordDate) OVER (ORDER BY recordDate) AS prev_date,
+           LAG(temperature) OVER (ORDER BY recordDate) AS prev_temperature
+    FROM Weather 
+) previous_table
+WHERE temperature > prev_temperature 
+  AND DATEDIFF(recordDate, prev_date) = 1; 
 
 /*
 ----------------------------------------------------------------------------
