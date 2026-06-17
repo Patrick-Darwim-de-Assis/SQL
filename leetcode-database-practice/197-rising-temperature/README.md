@@ -47,9 +47,16 @@ Explanation: * In 2015-01-02, the temperature was higher than the previous day (
 In 2015-01-04, the temperature was higher than the previous day (30 > 20).
 ```
 
-Technical Summary Inside Code File
-Approach 1: Self-Join optimization utilizing explicit time boundaries via DATEDIFF().
+📋 Technical Summary Inside Code File
+Approach 1: Self-Join Architecture
 
-Approach 2: Subquery encapsulation wrapping a window positioning mechanism (LAG()). Includes a detailed logical architectural note inside the script detailing calendar gaps.
+Core Mechanism: Utilizes an optimized Self-Join constraint paired with explicit DATEDIFF() operations.
 
+Impact: Enforces strict chronological pairing across shifting timeline datasets with optimal indexing efficiency.
+
+Approach 2: Subquery Encapsulation & Window Functions
+
+Core Mechanism: Implements an analytical Window Function (LAG()) wrapped inside an encapsulated relational subquery layer.
+
+Impact: Captures positional record sequences independent of disk storage streams. Includes a comprehensive architectural edge-case analysis within the script tracking physical layout gaps versus calendar data omissions.
 
