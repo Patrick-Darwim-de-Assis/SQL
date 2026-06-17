@@ -47,16 +47,24 @@ Explanation: * In 2015-01-02, the temperature was higher than the previous day (
 In 2015-01-04, the temperature was higher than the previous day (30 > 20).
 ```
 
-📋 Technical Summary Inside Code File
-Approach 1: Self-Join Architecture
+### 📋 Technical Summary Inside Code File
 
-Core Mechanism: Utilizes an optimized Self-Join constraint paired with explicit DATEDIFF() operations.
+```text
+=============================================================================
+* **Approach 1: Self-Join Architecture**
+=============================================================================
+- **Core Mechanism**: Utilizes an optimized Self-Join constraint paired 
+                      with explicit DATEDIFF() operations.
+- **Impact**: Enforces strict chronological pairing across shifting timeline 
+              datasets with optimal indexing efficiency.
 
-Impact: Enforces strict chronological pairing across shifting timeline datasets with optimal indexing efficiency.
-
-Approach 2: Subquery Encapsulation & Window Functions
-
-Core Mechanism: Implements an analytical Window Function (LAG()) wrapped inside an encapsulated relational subquery layer.
-
-Impact: Captures positional record sequences independent of disk storage streams. Includes a comprehensive architectural edge-case analysis within the script tracking physical layout gaps versus calendar data omissions.
+=============================================================================
+* **Approach 2: Subquery Encapsulation & Window Functions**
+=============================================================================
+- **Core Mechanism**: Implements an analytical Window Function (LAG()) 
+                wrapped inside an encapsulated relational subquery layer.
+- **Impact**: Captures positional record sequences independent of disk storage 
+              streams. Includes a comprehensive architectural edge-case 
+              analysis within the script tracking physical layout gaps 
+              versus calendar data omissions.
 
