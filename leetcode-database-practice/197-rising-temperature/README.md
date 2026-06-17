@@ -21,10 +21,12 @@ Note: id is the column with unique values for this table.
 There are no different rows with the same recordDate.
 This table contains information about the temperature on a certain day.
 
+```
 ### Example 1
 
 **Input:**
 Weather table:
+```text
 +----+------------+-------------+
 | id | recordDate | temperature |
 +----+------------+-------------+
@@ -33,8 +35,9 @@ Weather table:
 | 3  | 2015-01-03 | 20          |
 | 4  | 2015-01-04 | 30          |
 +----+------------+-------------+
-
+```
 **Output:**
+```text
 +----+
 | id |
 +----+
@@ -49,7 +52,6 @@ In 2015-01-04, the temperature was higher than the previous day (30 > 20).
 
 ### 📋 Technical Summary Inside Code File
 
-```text
 =============================================================================
 * **Approach 1: Self-Join Architecture**
 =============================================================================
