@@ -7,6 +7,8 @@ Welcome! This repository serves as a professional engineering log documenting my
 * **[176. Second Highest Salary](./leetcode-database-practice/176-second-highest-salary/)**: Isolating data boundaries using aggregate functions within scalar subqueries to safely process missing or null records.
 * **[181. Employees Earning More Than Their Managers](./leetcode-database-practice/181-employees-earning-more-than-managers/)**: Managing internal relational hierarchies using self-joins and isolated filtering scopes.
 * **[197. Rising Temperature](./leetcode-database-practice/197-rising-temperature/)**: Tracking day-over-day sequential data shifts using self-joins and nested analytical window functions (`LAG()`) while accounting for timeline gaps.
+* **Order By and Top-N**
+  * [Exercise 10: Custom Sorting with Top-N](./Databases%20for%20Developers%20-%20Next%20Level/Order%20By%20and%20Top-N/exercise%2010/readme.md) — *Leveraging conditional CASE expressions inside execution pipelines.*
 
 ## Core Concepts Mastered
 * **Time-Series Analysis**: Tracking structural updates across shifting chronological datasets using date-differentiation operations (`DATEDIFF()`).
